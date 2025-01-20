@@ -1,0 +1,50 @@
+﻿@page
+@model Pages.IndexModel
+
+<div id="content" style="margin: 0 auto; width:750px; padding:20px">
+    <form id="form-element"  method="post" >
+        <div class="form-group">
+            <ejs-richtexteditor id="rte" name="rteForm" placeholder="Type something"
+                                created="created" showCharCount="true"
+                                maxLength="100">
+            </ejs-richtexteditor>
+        </div>
+        <div style="text-align: center; padding:10px">
+            <ejs-button id="validateSubmit" content="Submit">
+            </ejs-button>
+            <ejs-button id="resetbtn" type="reset" content="Reset">
+            </ejs-button>
+        </div>
+        <div id="info" style="padding-top:10px"></div>
+    </form>
+</div>
+
+<script>
+    var formObject, options;
+
+    function created() {
+        options = {
+            rules:{
+                'rteForm':{
+                    required: [true, 'Enter a value.'],
+                    minLength: [20, 'Please enter at least 20 characters.'],
+                    maxLength: [100, 'Please provide value within 100 characters.']
+                }
+            }
+        };
+        formObject = new ej.inputs.FormValidator('#form-element', options);
+    };
+    window.onload = function () {
+        document.getElementById('form-element').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form reload
+
+            if(formObject.validate()){
+            document.getElementById('info').textContent = "Form Submitted Successfully!";
+            }
+        });
+
+        document.getElementById('resetbtn').onclick = function () {
+            document.getElementById('info').textContent = "";
+        };
+    };
+</script>
