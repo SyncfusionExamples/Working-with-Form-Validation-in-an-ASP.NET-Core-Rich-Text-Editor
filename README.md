@@ -2,7 +2,7 @@
 
 This quick-start project helps users work with form validation in the Syncfusion® [ASP.NET Core Rich Text Editor]( https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor?utm_source=github&utm_medium=listing&utm_campaign=tutorial-videos-aspnetcore-rte-formvalidation) control. This example demonstrates how to set validation rules, customize validation messages, and set the maximum number of characters in the RTE.
 
-Watch the video: Coming soon…
+Watch the video: https://www.syncfusion.com/tutorial-videos/aspnet-core/richtexteditor?title=working-with-form-validation-in-an-asp-net-core-rich-text
 
 Refer to the following documentation to learn about the ASP.NET Core RTE control: https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/form-support.
 
